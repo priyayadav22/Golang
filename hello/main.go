@@ -26,7 +26,13 @@ func main() {
 
 	runFunction()
 
-    runSlice()
+	runSlice()
 
 	runArray()
+
+	runMaps()
+
+	runStruct()
+
+	runStructMethod()
 }
