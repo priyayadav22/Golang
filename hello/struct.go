@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Student struct {
+type Ptudent struct {
 	name string
 	age int
 	score int
@@ -11,7 +11,7 @@ type Student struct {
 func runStruct(){
 	fmt.Println("****************Struct **********************")
 
-	p:= Student{name: "Priya", age:21, score:98}
+	p:= Ptudent{name: "Priya", age:21, score:98}
 // if u r passing printf then it expacts  (like %s, %d).
 // fmt.Printf("Student name: %s\n", p.name)  // %s for string
  
