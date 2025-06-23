@@ -44,14 +44,29 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	// "log"
+	// "net/http"
+	"fmt"
+	"bufio"
+	"os"
+	
 )
 
 func main() {
-	http.HandleFunc("/students", studenthandler)
-	log.Println("🚀 Server started at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	// http.HandleFunc("/students", studenthandler)
+	// log.Println("🚀 Server started at http://localhost:8080")
+	// log.Fatal(http.ListenAndServe(":8080", nil))
+
+	// var name string
+	reader := bufio.NewReader(os.Stdin)
+	//bufio package == buffered input/output from go's standard library
+	//newReader is a function that creates a new "reader" object that can read from input
+	//os.stdin: 	Stands for Standard Input (your keyboard input). It’s the source we're reading from
+	fmt.Println("write your name sweetheart: ")
+	// fmt.Scanln(&name) // it asks for input and wait until u press enter and take only first word from ur inputt
+	name,_ := reader.ReadString('\n')
+	// name, _ :=   Read and store the result in name. The _ is used to ignore the error
+	fmt.Println("hello ", name)
 }
 
 
@@ -83,5 +98,9 @@ tasks:
 ****************NOw instead of go run main.go.... just type : tasks run
 
 *********** it is optional  .. not required by GO.. use it only if you want automation
+
+
+
+
 
 */

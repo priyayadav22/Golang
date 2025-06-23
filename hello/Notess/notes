@@ -1,0 +1,112 @@
+/* 
+create a go cli app.
+STeps:
+1. pick a cli library
+flag--- built in , simple argument parshing
+cobra--- powerful for structured cli apps
+urfave/cli-- popular, elegant and easy to use
+
+Lexer : also known as tokenizer or scanner
+it is a component that reads raw input like source code or text and breaks it down into tokens- atomic units such as keywords , identifiers, numbers, symbola etc.
+
+i have 2 apples -:
+i --- a word (identifier)
+have -- a word (identifier)
+2 -- a numbers
+apples --- a word (identifier)
+. ---- a symbola
+
+a lexer takes input -- and read it character by character
+group character into tokens. 
+
+
+lexer is used to check grammer of a programming language.. it is not specific to  any 1 programming language
+
+
+
+Variable is like a box with a label on it.. like put anything in it.. it will take shape of that..
+var name string = "Priya     or name := "Priya"
+
+
+constant is like a box that you can never change once filled.   const pi= 3.1414
+
+
+
+type is a classification that defines the kind of data aa variable can store. 
+ type is int  for var a int=10
+ type is bool for var flag bool = false
+
+ 
+
+comma ok syntax:  //little bit confusing topic
+Simple Explanation:
+Imagine you're opening a gift 🎁 and you say:
+“I got a toy, and it was not broken!”
+That's what comma ok does in Go. You say:
+value, ok := something()
+You get the value, and also a small yes/no flag (ok) telling whether the operation succeeded or failed.
+
+
+ex: myMap :=map[string]string{"name": "Priya"}
+
+val, ok:= myMap["Priya"]  //val = "Priya", ok = true
+missing , ok:= muMap["age"]   // missing= "", ok= false
+------------ok tells us whether "name" or "age" was found
+
+
+comma ok is not a keyword.
+It is just a nickname or slang developers use to describe a pattern in Go.
+
+
+var i interface{} = "hello"
+
+s, ok := i.(string)   // s = "hello", ok = true
+“Hey Go, I believe i is a string. Can you try to take it out as a string? If yes, give it to me as s, and tell me if it worked as ok.”
+
+This is called the "comma ok idiom" in type assertion.
+✅ Line 1: s, ok := i.(string)
+i holds "hello" (which is a string)
+
+You assert: "Can I treat i as a string?"
+
+Go checks:
+
+Yes, ✅ it really is a string
+
+So s = "hello"
+
+And ok = true
+n, ok := i.(int)      // n = 0, ok = false
+--- it checks -- "can i treat i as string or int respectively"
+
+Package in Golang:::  Go uses package to organize code into reusable chunks
+
+"fmt" is a built in standard package for formatting output
+Println is a function inside  that package.
+
+project/
+├── main.go     this file will have package main
+└── greet/
+    └── greet.go    this file will have package greet
+
+
+
+// Exorted names start with capital letters like : Println...... so u cant use println as i is not exported, cant be used outside
+
+
+
+
+Conversion in Go means changing the type of value. from int to float64, string to int, byte to string etc.
+
+2 type of conversion in Go: 
+type conversion : manually change one type to another
+type assertion: used with interface (we'll skip for now unless you want that)
+
+var a int = 10
+var b float64 = float64(a) // convert int to float64
+**********int to string / string to int  using strconv package
+var a int=42
+str := strconv.Itoa(a)  // itoa = int  to ascii
+
+num,_ := strconv.Atoi("123") // atoi -- ascii to int
+*/

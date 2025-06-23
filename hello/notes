@@ -1,8 +1,0 @@
-create a go cli app.
-
-
-STeps:
-1. pick a cli library
-flag--- built in , simple argument parshing
-cobra--- powerful for structured cli apps
-urfave/cli-- popular, elegant and easy to use
